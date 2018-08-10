@@ -72,7 +72,7 @@ class HPCCChart extends LitElement {
 
     let queryName = this.query_name;
 
-    let serviceURL = "http://play.hpccsystems.com:8002/WsEcl/soap/query/roxie/" + queryName;
+    let serviceURL = "http://corp.dataseers.us:8002/WsEcl/soap/query/roxie/" + queryName;
 
     let serviceContent = {
       [queryName]: {
