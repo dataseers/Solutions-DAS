@@ -1,38 +1,60 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
-            "name": "play-thor",
-            "type": "ecl",
-            "request": "launch",
-            "mode": "submit",
-            "workspace": "${workspaceRoot}",
-            "program": "${file}",
-            "protocol": "http",
-            "serverAddress": "play.hpccsystems.com",
-            "port": 8010,
-            "rejectUnauthorized": false,
-            "targetCluster": "thor",
-            "eclccPath": "${config:ecl.eclccPath}",
-            "eclccArgs": [],
-            "includeFolders": "${config:ecl.includeFolders}",
-            "legacyMode": "${config:ecl.legacyMode}",
-            "resultLimit": 100,
-            "user": "",
-            "password": ""
+        "name": "localhost-thor",
+        "type": "ecl",
+        "request": "launch",
+        "mode":  "submit",
+        "workspace": "${workspaceRoot}",
+        "program": "${file}",
+        "protocol": "http",
+        "serverAddress": "corp.dataseers.us",
+        // "serverAddress": "10.255.215.203", 
+        // "serverAddress": "10.255.215.204", 
+        "port": 8010,
+        "rejectUnauthorized": false,
+        "targetCluster": "thor",
+        "eclccPath": "${config:ecl.eclccPath}",
+        "eclccArgs": [],
+        "includeFolders": "${config:ecl.includeFolders}",
+        "legacyMode": "${config:ecl.legacyMode}",
+        "resultLimit": 100,
+        "user": "gbandasha",
+        "password": "Nish@123"
+        } , 
+        {
+        "name": "localhost-hthor",
+        "type": "ecl",
+        "request": "launch",
+        "mode":  "submit",
+        "workspace": "${workspaceRoot}",
+        "program": "${file}",
+        "protocol": "http",
+        "serverAddress": "corp.dataseers.us", 
+        // "serverAddress": "10.255.215.203",
+        // "serverAddress": "10.255.215.204",  
+        "port": 8010,
+        "rejectUnauthorized": false,
+        "targetCluster": "hthor",
+        "eclccPath": "${config:ecl.eclccPath}",
+        "eclccArgs": [],
+        "includeFolders": "${config:ecl.includeFolders}",
+        "legacyMode": "${config:ecl.legacyMode}",
+        "resultLimit": 100,
+        "user": "gbandasha",
+        "password": "Nish@123"
         },
         {
-            "name": "play-roxie",
+            "name": "Roxie",
             "type": "ecl",
             "request": "launch",
-            "mode": "submit",
+            "mode":  "compile",
             "workspace": "${workspaceRoot}",
             "program": "${file}",
             "protocol": "http",
-            "serverAddress": "play.hpccsystems.com",
+            "serverAddress": "corp.dataseers.us",  
             "port": 8010,
             "rejectUnauthorized": false,
             "targetCluster": "roxie",
@@ -41,8 +63,8 @@
             "includeFolders": "${config:ecl.includeFolders}",
             "legacyMode": "${config:ecl.legacyMode}",
             "resultLimit": 100,
-            "user": "",
-            "password": ""
-        }
-    ]
-}
+            "user": "gbandasha",
+            "password": "Nish@123"
+            } 
+
+    ]}

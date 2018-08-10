@@ -170,14 +170,14 @@ class MyApp extends PolymerElement {
   constructor() {
     super();
 
-    this.dashService = "http://play.hpccsystems.com:8002/WsEcl/soap/query/roxie/das_dashboard_query.1";
+    this.dashService = "http://corp.dataseers.us:8002/WsEcl/soap/query/roxie/das_dashboard_query.1";
     this.dashServiceContent = {
       "das_dashboard_query.1": {
 
       }
     };
 
-    this.appService = "http://play.hpccsystems.com:8002/WsEcl/soap/query/roxie/das_application_query.1";
+    this.appService = "http://corp.dataseers.us:8002/WsEcl/soap/query/roxie/das_application_query.1";
     this.appServiceContent = {
       "das_application_query.1": {
 
