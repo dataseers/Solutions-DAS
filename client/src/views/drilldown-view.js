@@ -56,7 +56,7 @@ class DrilldownView extends LitElement {
   }
 
   _init() {
-    let serviceURL = "http://play.hpccsystems.com:8002/WsEcl/soap/query/roxie/das_dashboard_charts_query.1";
+    let serviceURL = "http://corp.dataseers.us:8002/WsEcl/soap/query/roxie/das_dashboard_charts_query.1";
     let serviceContent = {
       "das_dashboard_charts_query.1": {
         "dashboard_id": this.dashboard_id,
