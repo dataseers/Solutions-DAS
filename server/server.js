@@ -16,7 +16,8 @@ app.post('/api/*', (req, res) => {
 
 	
 	request.post({
-		"headers": { "content-type": "application/json" },
+		"headers": { "content-type": "application/json" ,'User-Agent': 'Request-Promise',
+		"Authorization": "Basic "+ btoa('gbandasha','Nish@123')},
 		"url": req.body.url,
 		"body": JSON.stringify(req.body.content)
 	}, (error, response, body) => {

@@ -5,7 +5,7 @@ export class Comm {
       method: 'post',
       headers: new Headers({
         'Content-Type': 'application/json',
-        'Authorization' : 'Basic ' + btoa('gbandasha','Nish@123'),
+        // 'Authorization' : 'Basic ' + btoa('gbandasha','Nish@123'),
       }),
       body: JSON.stringify({
         "url": serviceURL, "content": serviceContent
