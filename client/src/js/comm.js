@@ -4,7 +4,8 @@ export class Comm {
     return fetch('/api/chart-service', {
       method: 'post',
       headers: new Headers({
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization' : 'Basic' +btoa('gbandasha','Nish@123'),
       }),
       body: JSON.stringify({
         "url": serviceURL, "content": serviceContent
