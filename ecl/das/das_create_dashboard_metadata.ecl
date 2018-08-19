@@ -3,10 +3,10 @@ appRec := RECORD
     STRING title;
 END;
 
-apps := DATASET([{'cancer_research','Cancer Research'}, {'sales_demo','Sales Demo'}], appRec);
+apps := DATASET([{'cancer_research','Cancer Research'}, {'sales_demo','Sales Demo'},{'transaction','Transaction'}], appRec);
 
-OUTPUT(apps,,'~hpcc_das::config::apps.flat',NAMED('application_data'), OVERWRITE);
-
+// OUTPUT(apps,,'~hpcc_das::config::apps.flat',NAMED('application_data'), OVERWRITE);
+OUTPUT(apps);
 dashRec := RECORD
     STRING application_id;
     STRING id;
@@ -14,10 +14,11 @@ dashRec := RECORD
 END;
 
 dashboards := DATASET([{'cancer_research','all_cancers','All Cancers'}, {'cancer_research','bysite_cancers','Cancers By Site'},
-               {'sales_demo','sales_revenue','Sales Revenue'}, {'sales_demo','sales_quantity','Sales Quantity'}], dashRec);
+               {'sales_demo','sales_revenue','Sales Revenue'}, {'sales_demo','sales_quantity','Sales Quantity'},
+               {'transaction','Transaction_amount', 'Transaction Amount'}], dashRec);
 
-OUTPUT(dashboards,,'~hpcc_das::config::dashboards.flat',NAMED('dashboard_data'), OVERWRITE);
-
+// OUTPUT(dashboards,,'~hpcc_das::config::dashboards.flat',NAMED('dashboard_data'), OVERWRITE);
+OUTPUT(dashboards);
 dashChartRec := RECORD
     STRING dashboard_id;
     STRING chart_id;
@@ -36,7 +37,8 @@ charts := DATASET([{'all_cancers','all_cancers_by_year','Trend By Year', 'bar', 
                {'sales_revenue','quarterly_revenue','Revenue By Quarter', 'bar', 'sales_query.1','quarterlyRevenue'},
                {'drilldown_all_cancers_for_age','drilldown_all_cancers_for_age','Cancer distribution by Age', 'pie', 'cancer_research_drilldown_by_age_query.1','allByYearAndAge'},
                {'drilldown_all_cancers_for_age','drilldown_all_cancers_for_age','Cancer distribution by Age for current and prior year', 'bar', 'cancer_research_drilldown_by_age_query.1','previousYear'},
-               {'drilldown_all_cancers_for_age','drilldown_all_cancers_for_age','Cancer distribution by Age for current and prior year', 'table', 'cancer_research_drilldown_by_age_query.1','previousYear'}], dashChartRec);
+               {'drilldown_all_cancers_for_age','drilldown_all_cancers_for_age','Cancer distribution by Age for current and prior year', 'table', 'cancer_research_drilldown_by_age_query.1','previousYear'},
+               {'transaction_amount','monthly','Revenue By Month', 'bar', 'transaction_query.1','MonthlylyRevenue'}], dashChartRec);
 
-
-OUTPUT(charts,,'~hpcc_das::config::charts.flat',NAMED('dashboard_charts_data'), OVERWRITE); 
+OUTPUT(charts);
+// OUTPUT(charts,,'~hpcc_das::config::charts.flat',NAMED('dashboard_charts_data'), OVERWRITE); 

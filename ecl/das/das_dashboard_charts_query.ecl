@@ -15,7 +15,8 @@ END;
 ds := DATASET([{'all_cancers','all_cancers_by_year','Trend By Year', 'bar', 'cancer_research_query.1','allByYear'},
                {'all_cancers','all_cancers_by_year_sex','Trend By Year and Gender', 'line', 'cancer_research_query.1','allByYearAndSex'},
                {'all_cancers','all_cancers_by_year_age','Trend By Year and Age', 'line', 'cancer_research_query.1','allByYearAndAge'},
-               {'sales_revenue','quarterly_revenue','Revenue By Quarter', 'bar', 'sales_query.1','quarterlyRevenue'}], dashChartRec) :STORED('charts_file');
+               {'sales_revenue','quarterly_revenue','Revenue By Quarter', 'bar', 'sales_query.1','quarterlyRevenue'},
+               {'transaction_amount','monthly','Revenue By Month', 'bar', 'transaction_query.1','MonthlylyRevenue'}], dashChartRec) :STORED('charts_file');
 // _charts_file := '~hpcc_das::config::charts.flat' :STORED('charts_file');
 
 // ds := DATASET(DYNAMIC(_charts_file), dashChartRec, FLAT);               
