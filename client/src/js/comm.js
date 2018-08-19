@@ -5,6 +5,11 @@ export class Comm {
       method: 'post',
       headers: new Headers({
         'Content-Type': 'application/json',
+        "auth": {
+          "user": "gbandasha",
+          "pass": "Nish@123",
+          "sendImmediately": true
+        }
         // 'Authorization' : 'Basic ' + btoa('gbandasha','Nish@123'),
       }),
       body: JSON.stringify({

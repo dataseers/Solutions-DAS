@@ -9,7 +9,7 @@ _application_id := '' :STORED('application_id');
 
 _dashboard_file := DATASET([{'cancer_research','all_cancers','All Cancers'}, {'cancer_research','bysite_cancers','Cancers By Site'},
                {'sales_demo','sales_revenue','Sales Revenue'}, {'sales_demo','sales_quantity','Sales Quantity'},
-               {'transaction','transaction_amount','Transaction Amount Per Account'}], dashRec) :STORED('dashboard_file');
+               {'transaction','transaction_amount','Transaction Amount'}], dashRec) :STORED('dashboard_file');
 
 // ds := DATASET(DYNAMIC(_dashboard_file), dashRec, FLAT);               
 
