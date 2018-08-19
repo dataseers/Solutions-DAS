@@ -34,7 +34,7 @@
     "pwa-helpers": "^0.8.3"
   },
   "devDependencies": {
-    "polymer-cli": "^1.7.7",
+    "polymer-cli": "^1.8.0",
     "wct-browser-legacy": "^1.0.1"
   },
   "engines": {
