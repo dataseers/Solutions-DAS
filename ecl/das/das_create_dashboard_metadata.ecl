@@ -15,7 +15,7 @@ END;
 
 dashboards := DATASET([{'cancer_research','all_cancers','All Cancers'}, {'cancer_research','bysite_cancers','Cancers By Site'},
                {'sales_demo','sales_revenue','Sales Revenue'}, {'sales_demo','sales_quantity','Sales Quantity'},
-               {'transaction','Transaction_amount', 'Transaction Amount'}], dashRec);
+               {'transaction','transaction_amount', 'Transaction Amount'}], dashRec);
 
 // OUTPUT(dashboards,,'~hpcc_das::config::dashboards.flat',NAMED('dashboard_data'), OVERWRITE);
 OUTPUT(dashboards);
